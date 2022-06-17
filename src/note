@@ -1,0 +1,102 @@
+ angular -front end development
+
+
+ Basic command
+ *************
+
+
+ 1. create project - ng new projec-name  / ng new project-name --routing
+
+ 2. to run a project - ng serve /ng serve --open
+
+ 3. to create component -ng g c component-name
+
+ 4. to create Services - ng g s service-name
+
+
+
+
+ Basic concepts
+ ****************
+
+ 1.component -  to create{html,css,ts file} root component -AppComponent
+
+ 2.Module    -  to add libraries to the project -root modules - AppModule
+
+
+
+ Data binding
+ ************
+
+ 1. One way binding
+---------------------------
+       
+    1.1 component to view
+
+        1.1.1 String interpolation: syntax- {{variable-name}}
+
+        1.1.2 property binding: syntax- [attribute]="variable-name" 
+
+
+
+    1.2 view to component
+
+        1.2.1 Event binding: syntax: - (event)="function-call()"
+
+        1.2.2 Event binding using $event - (event)="function-call($event)"
+
+        1.2.3 Template referencing variable - syntax: #variable-name
+
+
+
+2. Two way bunding
+------------------------------
+
+
+    2.1 using ng model: 
+      *Import FormsModule in AppModule
+      *syntax:[(ngModel)]="variable-name"
+
+
+
+
+
+To set a path for a component
+******************************
+* defined in app routing module
+* syntax: {path:'',component:componentClassName}
+
+
+
+
+Dependency injection
+*********************
+To share data between classes
+
+
+Angular services
+*****************
+For redundant data
+
+
+
+ngSubmit
+********
+To submit entire form
+syntax: ngSubmit="function-call()"
+
+
+
+
+Angular forms
+*************
+
+1. Template driven forms :- first design html
+
+2. Model driven forms :- first create model in ts
+   
+   2.1 Reactive forms :- Add validation  -  Import reactive forms module
+
+       form group - FormBuilder dependency inject,
+       form array , 
+       forn control
