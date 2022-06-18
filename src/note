@@ -98,5 +98,5 @@ Angular forms
    2.1 Reactive forms :- Add validation  -  Import reactive forms module
 
        form group - FormBuilder dependency inject,
-       form array , 
+       form array 
        forn control
