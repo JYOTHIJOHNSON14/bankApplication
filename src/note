@@ -114,3 +114,16 @@ Angular directives: To manipulate DOM
    2.structural directives : to change structure of DOM
        
        2.1. ngIf :  syntax -  *ngIf="condition"
+
+
+
+
+Local storage
+*************
+Local storage: to permanantly store datas in browser
+
+   1.setItem()
+
+   2.getItem()
+
+   3.removeItem()

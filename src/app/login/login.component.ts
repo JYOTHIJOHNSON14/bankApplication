@@ -21,10 +21,10 @@ export class LoginComponent implements OnInit {
   pswd = ""
 
 
-  
-  loginForm=this.fb.group({
-    acno: ['',[Validators.required, Validators.pattern('[0-9]*')]],
-    pswd: ['',[Validators.required, Validators.pattern('[a-zA-Z0-9 ]*')]]
+
+  loginForm = this.fb.group({
+    acno: ['', [Validators.required, Validators.pattern('[0-9]*')]],
+    pswd: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9 ]*')]]
   })
 
 
@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
 
 
   //dependency injection
-  constructor(private router: Router, private ds: DataService,private fb:FormBuilder) { }
+  constructor(private router: Router, private ds: DataService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
   }
@@ -74,14 +74,18 @@ export class LoginComponent implements OnInit {
     var acno = this.loginForm.value.acno
     var pswd = this.loginForm.value.pswd
     // let db=this.db
-    const result = this.ds.login(acno, pswd)
 
+    if (this.loginForm.valid) {
+      const result = this.ds.login(acno, pswd)
 
-    if (result) {
+      if (result) {
+        alert("Login successful")
+        this.router.navigateByUrl('dashboard')
+      }
 
-      alert("Login successful")
-
-      this.router.navigateByUrl('dashboard')
+    }
+    else{
+      alert("Invalid form")
     }
 
   }
