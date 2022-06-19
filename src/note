@@ -100,3 +100,17 @@ Angular forms
        form group - FormBuilder dependency inject,
        form array 
        forn control
+
+
+
+Angular directives
+*******************
+Angular directives: To manipulate DOM
+
+   Types of directives
+   --------------------
+   1.Component directives
+
+   2.structural directives : to change structure of DOM
+       
+       2.1. ngIf :  syntax -  *ngIf="condition"
